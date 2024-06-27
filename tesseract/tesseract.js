@@ -7,7 +7,7 @@ export const predictText = async (image, res) => {
         let resultText = result.data.text;
         resultText = resultText.replace(/\n/g, ' ');
 
-        const response = await axios.get(`http://localhost:5000/v1/api/hadits/${resultText}`)
+        const response = await axios.get(`https://ar-aplication.vercel.app/v1/api/hadits/${resultText}`)
             .catch((error) => {
                 if (error.response && error.response.status === 404) {
                     return {

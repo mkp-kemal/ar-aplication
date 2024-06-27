@@ -60,7 +60,7 @@ const uploadImageToStorage = (file) => {
 const getImage = async (req, res) => {
   try {
     if (!req.files || !req.files.image) {
-      return res.status(400).send({ message: 'No files were uploaded.' });
+      return res.status(400).send({ message: 'Gambar masih kosong!' });
     }
 
     const file = req.files.image;
